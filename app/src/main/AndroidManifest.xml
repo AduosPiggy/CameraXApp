@@ -7,6 +7,7 @@
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         android:maxSdkVersion="28" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -27,7 +28,12 @@
         </activity>
 
         <activity
-            android:name=".FfmpegActivity"
+            android:name=".activity.FfmpegActivity"
+            android:exported="true">
+        </activity>
+
+        <activity
+            android:name=".activity.CameraXActivity"
             android:exported="true">
         </activity>
 

@@ -6,64 +6,41 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/vertical_centerline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent=".50" />
-
-    <androidx.camera.view.PreviewView
-        android:id="@+id/viewFinder"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-
-    <Button
-        android:id="@+id/image_capture_button"
-        android:layout_width="110dp"
-        android:layout_height="110dp"
-        android:layout_marginBottom="50dp"
-        android:layout_marginEnd="50dp"
-        android:elevation="2dp"
-        android:text="@string/take_photo"
-        android:textAllCaps="false"
+    <View
+        android:id="@+id/verticalDivider"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:background="?android:attr/listDivider"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/vertical_centerline" />
-
-    <Button
-        android:id="@+id/video_capture_button"
-        android:layout_width="110dp"
-        android:layout_height="110dp"
-        android:layout_marginBottom="50dp"
-        android:layout_marginStart="50dp"
-        android:elevation="2dp"
-        android:text="@string/start_capture"
-        android:textAllCaps="false"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@id/vertical_centerline" />
-
-    <Button
-        android:id="@+id/switch_camera_button"
-        android:layout_width="100dp"
-        android:layout_height="60dp"
-        android:text="qh"
-        android:textAllCaps="false"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginRight="20dp"
         />
+
+    <Button
+        android:id="@+id/start_camera_x_button"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/verticalDivider"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="CameraX"
+        android:textAllCaps="false"
+
+        />
+
+
     <Button
         android:id="@+id/start_ffmpeg_button"
         android:layout_width="100dp"
         android:layout_height="60dp"
-        android:text="ffmpeg"
-        android:textAllCaps="false"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginLeft="20dp"
-        />
+        app:layout_constraintEnd_toStartOf="@+id/verticalDivider"
+        app:layout_constraintTop_toBottomOf="@+id/start_camera_x_button"
+        android:layout_marginTop="20dp"
+        android:text="FFmpeg"
+        android:textAllCaps="false"
 
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
