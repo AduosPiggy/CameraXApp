@@ -2,6 +2,7 @@ package com.android.example.cameraxapp
 
 import android.Manifest
 import android.content.ContentValues
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Build
 import android.os.Bundle
@@ -66,6 +67,10 @@ class MainActivity : AppCompatActivity() {
                 CameraSelector.LENS_FACING_BACK
             }
             startCamera() // 重新启动相机
+        }
+        viewBinding.startFfmpegButton.setOnClickListener{
+            val intent = Intent(this, FfmpegActivity::class.java)
+            startActivity(intent)
         }
 
         cameraExecutor = Executors.newSingleThreadExecutor()
