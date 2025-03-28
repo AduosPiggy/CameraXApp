@@ -39,7 +39,7 @@ class CameraXActivity : AppCompatActivity() {
     override fun onDestroy() {
         super.onDestroy()
         cameraExecutor.shutdown()
-
+        finish()
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

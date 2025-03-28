@@ -9,6 +9,11 @@ class FfmpegActivity : AppCompatActivity() {
     private lateinit var binding: ActivityFfmpegBinding
     private val tag_ffmpeg_kfflso = "tag_ffmpeg_kfflso"
 
+    override fun onDestroy() {
+        super.onDestroy()
+        finish()
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityFfmpegBinding.inflate(layoutInflater)
